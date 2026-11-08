@@ -1,0 +1,731 @@
+
+/* =========================================
+   SI-MAPAN ODGJ - MAIN STYLESHEET
+   ========================================= */
+
+/* RESET & GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f0f5fc;
+    color: #15243c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   LAYOUT UTAMA
+   ========================================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 270px;
+    flex-shrink: 0;
+    background: linear-gradient(165deg, #153c64, #102c4a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* BRAND SIDEBAR */
+.brand {
+    text-align: center;
+    padding: 26px 10px 28px;
+}
+
+.brain {
+    font-size: 52px;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    margin: auto auto 10px;
+}
+
+.brand h2 {
+    margin: 4px 0;
+    font-size: 24px;
+}
+
+.brand small {
+    line-height: 1.5;
+}
+
+/* MENU SIDEBAR */
+.sidebar nav {
+    padding: 0 8px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 16px 17px;
+    border-radius: 9px;
+    margin-bottom: 3px;
+}
+
+.sidebar nav a i {
+    width: 27px;
+    font-size: 18px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: linear-gradient(90deg, #00aab1, #008a9b);
+}
+
+.sidebar-foot {
+    margin-top: auto;
+    padding: 25px 12px;
+    text-align: center;
+    color: #d7eaf6;
+}
+
+/* =========================================
+   MAIN CONTENT & TOPBAR
+   ========================================= */
+
+.main {
+    min-width: 0;
+    flex: 1;
+}
+
+.topbar {
+    background: linear-gradient(90deg, #126b85, #009aa1);
+    color: white;
+    height: 57px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar i {
+    font-size: 18px;
+}
+
+.logout {
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+.content {
+    padding: 22px;
+}
+
+.footer {
+    padding: 14px;
+    text-align: center;
+    color: #6e7f93;
+    font-size: 12px;
+}
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 29px;
+    margin: 0 0 4px;
+}
+
+.heading p {
+    margin: 0;
+    color: #56657a;
+}
+
+/* =========================================
+   DASHBOARD STATISTICS
+   ========================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat,
+.panel {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px #20344e17;
+    border: 1px solid #e0e8f2;
+}
+
+.stat {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.stat .ico {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 27px;
+    background: #00a5b0;
+}
+
+.stat:nth-child(2) .ico {
+    background: #17b78d;
+}
+
+.stat:nth-child(3) .ico {
+    background: #f9b91f;
+}
+
+.stat:nth-child(4) .ico {
+    background: #f24e58;
+}
+
+.stat strong {
+    font-size: 31px;
+    display: block;
+    margin-top: 7px;
+}
+
+/* =========================================
+   GRID & PANEL
+   ========================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(300px, 1fr);
+    gap: 18px;
+}
+
+.panel {
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.panel-title {
+    background: linear-gradient(90deg, #007c8c, #076579);
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.panel-body {
+    padding: 18px;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 22px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea,
+.search {
+    width: 100%;
+    border: 1px solid #bfcddd;
+    border-radius: 6px;
+    padding: 11px;
+    font: inherit;
+    background: white;
+}
+
+.field textarea {
+    min-height: 64px;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.btn {
+    border: 0;
+    border-radius: 7px;
+    background: #007f90;
+    color: white;
+    padding: 11px 17px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.btn:hover {
+    filter: brightness(.93);
+}
+
+.btn.secondary {
+    background: #e4e9ef;
+    color: #27384c;
+}
+
+.btn.danger {
+    background: #dc3545;
+}
+
+.btn.warn {
+    background: #f6aa15;
+    color: #17243a;
+}
+
+.btn.small {
+    padding: 6px 9px;
+    font-size: 12px;
+}
+
+.actions {
+    display: flex;
+    gap: 7px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.table-wrap {
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+}
+
+th {
+    background: #007b87;
+    color: white;
+    text-align: left;
+}
+
+td,
+th {
+    padding: 11px 10px;
+    border: 1px solid #e0e6ed;
+}
+
+tr:nth-child(even) td {
+    background: #f7f9fc;
+}
+
+/* =========================================
+   BADGE STATUS
+   ========================================= */
+
+.badge {
+    padding: 5px 9px;
+    background: #e1f5f1;
+    color: #087c65;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* =========================================
+   BADGE PROGRES PASIEN
+   ========================================= */
+
+.badge-progres {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    border: none;
+    vertical-align: middle;
+}
+
+/* HIJAU - RUTIN MENGONSUMSI OBAT */
+.progres-rutin {
+    background: #e1f5f1;
+    color: #087c65;
+}
+
+/* KUNING - TIDAK RUTIN */
+.progres-tidak-rutin {
+    background: #fff3cd;
+    color: #946200;
+}
+
+/* MERAH - PUTUS OBAT */
+.progres-putus {
+    background: #fde8e8;
+    color: #c62828;
+}
+
+/* ABU-ABU - BELUM ADA DATA */
+.progres-kosong {
+    background: #e9edf2;
+    color: #66788c;
+}
+
+/* =========================================
+   NOTE & ALERT
+   ========================================= */
+
+.note {
+    background: #fff8dc;
+    padding: 12px 15px;
+    border-radius: 7px;
+    margin: 0 0 18px;
+    color: #73520b;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 7px;
+    background: #e1f6ec;
+    color: #17684d;
+    margin-bottom: 15px;
+}
+
+.alert.error {
+    background: #fce9e9;
+    color: #9a2525;
+}
+
+/* =========================================
+   PUSKESMAS LIST
+   ========================================= */
+
+.puskesmas-list {
+    max-height: 360px;
+    overflow: auto;
+    padding: 0;
+    margin: 12px 0 0;
+    list-style: none;
+}
+
+.puskesmas-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e3e9f1;
+}
+
+.puskesmas-list li:nth-child(odd) {
+    background: #f5f8fc;
+}
+
+.puskesmas-list li b {
+    display: inline-block;
+    background: #e9edf2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 9px;
+}
+
+/* =========================================
+   FILTER
+   ========================================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.filters > * {
+    max-width: 260px;
+}
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    background: #eef5fb;
+}
+
+.login-left {
+    background:
+        linear-gradient(135deg, #073458e8, #134e78ed),
+        linear-gradient(40deg, #008d9e, #11395e);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-left:after {
+    content: '';
+    position: absolute;
+    border: 60px solid #0db5bc55;
+    border-radius: 50%;
+    width: 760px;
+    height: 760px;
+    bottom: -580px;
+    left: -200px;
+}
+
+.login-left h1 {
+    font-size: 52px;
+    margin: 15px 0;
+}
+
+.login-left p {
+    font-size: 27px;
+    line-height: 1.4;
+}
+
+.login-left li {
+    font-size: 21px;
+    margin: 28px 0;
+}
+
+.login-left ul {
+    padding-left: 25px;
+}
+
+.login-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 12px 38px #1b41611a;
+    padding: 45px;
+    width: min(100%, 540px);
+    text-align: center;
+}
+
+.login-card h1 {
+    font-size: 34px;
+    color: #0b2d59;
+    margin: 12px 0;
+}
+
+.login-card p {
+    font-size: 18px;
+    color: #183f67;
+}
+
+.login-card .field {
+    text-align: left;
+    margin: 18px 0;
+}
+
+.login-card .btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 16px;
+    background: linear-gradient(90deg, #008c90, #00a39c);
+}
+
+.login-card h3 {
+    margin-top: 35px;
+    color: #0c3058;
+}
+
+/* =========================================
+   MAP
+   ========================================= */
+
+#map {
+    height: 520px;
+    border-radius: 8px;
+}
+
+/* =========================================
+   UTILITIES
+   ========================================= */
+
+.muted {
+    color: #66788c;
+}
+
+.right {
+    text-align: right;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline button {
+    vertical-align: middle;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 225px;
+    }
+
+    .brand h2 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
+
+@media (max-width: 750px) {
+    .app {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar nav {
+        display: flex;
+        overflow: auto;
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+    }
+
+    .sidebar-foot {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0 10px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .login-left {
+        padding: 25px;
+    }
+
+    .login-left h1 {
+        font-size: 29px;
+    }
+
+    .login-left p {
+        font-size: 17px;
+    }
+
+    .login-left li {
+        font-size: 14px;
+        margin: 8px;
+    }
+
+    .login-right {
+        padding: 20px;
+    }
+
+    .login-card {
+        padding: 24px;
+    }
+}
+
+/* =========================================
+   PRINT
+   ========================================= */
+
+@media print {
+    .sidebar,
+    .topbar,
+    .footer,
+    .btn,
+    .filters,
+    .note {
+        display: none !important;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .panel {
+        box-shadow: none;
+        border: 0;
+    }
+
+    .panel-title {
+        color: #000;
+        background: white;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    body {
+        background: white;
+    }
+}

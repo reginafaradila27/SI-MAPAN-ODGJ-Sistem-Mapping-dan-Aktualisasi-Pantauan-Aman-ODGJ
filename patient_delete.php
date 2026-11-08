@@ -1,0 +1,1 @@
+<?php require 'config/db.php';auth();if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);exit;}verify_csrf();$id=(int)($_POST['id']??0);if(!$id||!patient_access($pdo,$id)){http_response_code(403);exit('Akses ditolak');}$s=$pdo->prepare('DELETE FROM patients WHERE id=?');$s->execute([$id]);redirect('patients.php');
